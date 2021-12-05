@@ -1,0 +1,283 @@
+/** GLOBAL VARIABLES **/
+@font-face {
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
+  src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg"); }
+/** GENERAL SETTINGS **/
+.text-font {
+  font-family: "Titillium Web"; }
+
+.number-font {
+  font-family: "Orbitron"; }
+
+.footer-font {
+  font-family: "Pacifico"; }
+
+.text-pink {
+  color: #d3e021; }
+
+.bg-dark {
+  background-color: #303030 !important; }
+
+.primary-color {
+  color: #cde021 !important; }
+
+*:not(.rem) {
+  border-radius: 2px !important; }
+
+.btn-danger {
+  background-color: #2184e0 !important; }
+
+
+.modal-content {
+  border-radius: 10px !important; }
+
+.btn-outline-danger {
+  color: #e05721;
+  border-color: #e0ad21; }
+  .btn-outline-danger:hover {
+    background-color: #e0cd21; }
+
+/** NAVBAR **/
+.navbar .navbar-brand {
+  font-family: "Pacifico";
+  font-size: 2em;
+  color: #ca21e0 !important; }
+  .navbar .navbar-brand .nav-img {
+    padding: 0;
+    height: 40px;
+    margin-top: -2px; }
+.navbar li {
+  padding: 0; }
+  .navbar li a {
+    color: #fff !important; }
+  .navbar li.active a {
+    background: #6a21e0;
+    color: #303030 !important; }
+.navbar .btn-search {
+  color: #2421e0;
+  border-color: #2134e0; }
+.navbar .form-control {
+  border-color: #5421e0; }
+  .navbar .form-control:focus {
+    border-color: #2e21e0; }
+
+/** HEADER SHOWCASE **/
+header#showcase {
+  border-bottom: rgba(224, 33, 138, 0.7) 2px solid; }
+ 
+/** PRODUCTS **/
+section#product-cart .img-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 213px;
+  height: 213px;
+  margin-right: 0 !important; }
+  section#product-cart .img-container .place-badge {
+    position: absolute;
+    bottom: 6px;
+    right: 6px; }
+section#product-cart .card {
+  box-shadow: 5px 8px 16px 0px #bdbbbd; }
+
+/** FLOATING CART **/
+#floatingCart.fixed-botttom {
+  position: fixed;
+  right: 45px;
+  bottom: 50px; }
+#floatingCart.floating {
+  float: left;
+  animation-name: Floatingx;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  -moz-animation-name: Floating;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px; }
+
+/** FOOTER **/
+footer#main-footer {
+  border-top: rgba(224, 33, 138, 0.3) 2px solid; }
+
+/** ADD TO CART MODAL **/
+#addToCart .modal-footer {
+  justify-content: space-between; }
+#addToCart .item-qty {
+  width: 40px;
+  border-radius: 4px !important;
+  border: 1px solid #ccc;
+  text-align: center;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+  #addToCart .item-qty:hover {
+    border-color: #d3e021; }
+
+/** SHOPPING CART MODAL **/
+#showCart .order-image {
+  float: left;
+  width: 10%; }
+  #showCart .order-image img {
+    width: 50%; }
+#showCart .order-details {
+  float: left;
+  width: 47%; }
+#showCart .order-price {
+  float: left;
+  width: 12%; }
+#showCart .order-qty {
+  float: left;
+  width: 8%; }
+  #showCart .order-qty input {
+    text-align: center !important;
+    padding-left: 2px;
+    width: 40px;
+    border-radius: 4px !important;
+    border: 1px solid #ccc;
+    text-align: left;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+    #showCart .order-qty input:hover {
+      border-color: #c3e021; }
+#showCart .order-removal {
+  float: left;
+  width: 11%; }
+  #showCart .order-removal .remove {
+    border-radius: 50% !important; }
+#showCart .order-total-price {
+  float: left;
+  width: 12%;
+  text-align: center; }
+#showCart .group:before, #showCart .order:before,
+#showCart .group:after,
+#showCart .order:after {
+  content: '';
+  display: table; }
+#showCart .group:after, #showCart .order:after {
+  clear: both; }
+#showCart .group, #showCart .order {
+  zoom: 1; }
+#showCart .order {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #f2f2f2; }
+#showCart .fa-times-circle {
+  color: #7de021;
+  font-size: 1.5em; }
+
+/** SHOWCART MODAL **/
+#showCart .modal-footer .btn-outline-danger:hover {
+  background-color: #303030;
+  border-color: #303030;
+  -webkit-animation: swing 1s ease;
+  animation: swing 1s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1; }
+  #showCart .modal-footer .btn-outline-danger:hover::before {
+    content: "\f07a";
+    font-family: FontAwesome; }
+#showCart .modal-footer .checkout-animate:hover {
+  -webkit-animation: swing 1s ease;
+  animation: swing 1s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1; }
+#showCart .pulse-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  padding-right: 2.2em; }
+#showCart .pulse-grow:before {
+  content: "\f0a9";
+  position: absolute;
+  right: 1em;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+#showCart .pulse-grow:hover:before,
+#showCart .pulse-grow:focus:before,
+#showCart .pulse-grow:active:before {
+  -webkit-animation-name: pulse-grow;
+  animation-name: pulse-grow;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate; }
+
+/** ANIMATIONS **/
+/* Floating CREDIT: DJS Baker (https://fiddle.jshell.net/djsbaker/rkzZG/) */
+@keyframes Floatingx {
+  from {
+    -webkit-transform: translate(0, 0px); }
+  65% {
+    -webkit-transform: translate(0, 15px); }
+  to {
+    -webkit-transform: translate(0, 0px); } }
+@keyframes Floating {
+  from {
+    -moz-transform: translate(0, 0px); }
+  65% {
+    -moz-transform: translate(0, 15px); }
+  to {
+    -moz-transform: translate(0, 0px); } }
+/* Swing CREDIT: SARA Viera (https://twitter.com/NikkitaFTW) */
+@-webkit-keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px); }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px); }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px); }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px); }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px); }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px); }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px); }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px); }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px); }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px); }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+/* Icon Pulse Grow CREDIT: Ian Lunn (http://ianlunn.github.io/Hover) */
+@-webkit-keyframes pulse-grow {
+  to {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); } }
+@keyframes pulse-grow {
+  to {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); } }
+
+/*# sourceMappingURL=style.css.map */

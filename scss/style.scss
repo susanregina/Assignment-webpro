@@ -1,0 +1,428 @@
+/** GLOBAL VARIABLES **/
+
+$primary-color: #e0218a;
+$bg-dark: #303030;
+$font-letter: 'Titillium Web';
+$font-number: 'Orbitron';
+$font-stylish: 'Pacifico';
+$primary-color-fade: rgba(224, 33, 138, 0.7);
+$primary-color-fader: rgba(224, 33, 138, 0.3);
+@font-face {
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
+  src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+}
+
+/** GENERAL SETTINGS **/
+
+.text-font {
+  font-family: $font-letter;
+}
+
+.number-font {
+  font-family: $font-number;
+}
+
+.footer-font {
+  font-family: $font-stylish;
+}
+
+.text-pink {
+  color: $primary-color;
+}
+
+.bg-dark {
+  background-color: $bg-dark !important;
+}
+
+.primary-color {
+  color: $primary-color !important;
+}
+
+*:not(.rem) {
+  border-radius: 2px !important;
+}
+
+.btn-danger {
+  background-color: $primary-color !important;
+}
+
+.wrapper {
+  background: url('../img/background.jpg'); /*Courtesy: Tristan Colangelo | Unsplash Images */
+  background-size: cover;
+}
+
+.modal-content {
+  border-radius: 10px !important;
+}
+
+.btn-outline-danger {
+  color: $primary-color;
+  border-color: $primary-color;
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+
+/** NAVBAR **/
+.navbar {
+  .navbar-brand {
+    font-family: $font-stylish;
+    font-size: 2em;
+    color: $primary-color !important;
+    .nav-img {
+      padding: 0;
+      height: 40px;
+      margin-top: -2px;
+    }
+  }
+  li {
+    padding: 0;
+    a {
+      color: #fff !important;
+    }
+    &.active {
+      a {
+        background: $primary-color;
+        color: $bg-dark !important;
+      }
+    }
+  }
+  .btn-search {
+    color: $primary-color;
+    border-color: $primary-color;
+  }
+  .form-control {
+    border-color: $primary-color;
+    &:focus {
+      border-color: $primary-color;
+    }
+  }
+}
+
+
+/** HEADER SHOWCASE **/
+header#showcase {
+  border-bottom: $primary-color-fade 2px solid;
+  .carousel-item {
+    height: 220px;
+  }
+  .carousel-image-1 {
+    background: url('../img/slide1.jpg');
+    background-size: cover;
+  }
+  .carousel-image-2 {
+    background: url('../img/slide2.jpg');
+    background-size: cover;
+  }
+  .carousel-image-3 {
+    background: url('../img/slide3.jpg');
+    background-size: cover;
+  }
+}
+
+
+/** PRODUCTS **/
+section#product-cart {
+  .img-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 213px;
+    height: 213px;
+    margin-right: 0 !important;
+    .place-badge {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+    }
+  }
+  .card {
+    box-shadow: 5px 8px 16px 0px rgba(189, 187, 189, 1);
+  }
+}
+
+
+/** FLOATING CART **/
+#floatingCart  {
+  &.fixed-botttom {
+    position: fixed;
+    right: 45px;
+    bottom: 50px;
+  }
+  
+  &.floating {
+    float: left;
+    animation-name: Floatingx;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+  }
+}
+
+
+/** FOOTER **/ 
+footer#main-footer {
+  border-top: $primary-color-fader 2px solid
+}
+
+
+/** ADD TO CART MODAL **/ 
+#addToCart {
+  .modal-footer {
+    justify-content: space-between;
+  }
+  .item-qty {
+    width: 40px;
+    border-radius: 4px !important;
+    border: 1px solid #ccc;
+    text-align: center;
+    box-shadow: inset 0 1px 1px rgba($color: #000000, $alpha: 0.075);
+    &:hover {
+      border-color: $primary-color;
+    }
+  }
+}
+
+
+/** SHOPPING CART MODAL **/
+#showCart {
+  .order-image {
+    float: left;
+    width: 10%;
+    img {
+      width: 50%;
+    }
+  }
+  .order-details {
+    float: left;
+    width: 47%;
+  }
+  .order-price {
+    float: left;
+    width: 12%;
+  }
+  .order-qty {
+    float: left;
+    width: 8%;
+    input {
+      text-align: center !important;
+      padding-left: 2px;
+      width: 40px;
+      border-radius: 4px !important;
+      border: 1px solid #ccc;
+      text-align: left;
+      box-shadow: inset 0 1px 1px rgba($color: #000000, $alpha: 0.075);
+      &:hover {
+        border-color: $primary-color;
+      }
+    }
+  }
+  .order-removal {
+    float: left;
+    width: 11%;
+    .remove {
+      border-radius: 50% !important;
+    }
+  }
+  .order-total-price {
+    float: left;
+    width: 12%;
+    text-align: center;
+  }
+  
+  .group:before,
+  .group:after {
+    content: '';
+    display: table;
+  }
+  .group:after {
+    clear: both;
+  }
+  .group {
+    zoom: 1;
+  }
+
+  .order {
+    @extend .group;
+  }
+  .order {
+    padding-bottom: 2px;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .fa-times-circle {
+    color: $primary-color;
+    font-size: 1.5em;
+  }
+}
+
+
+/** SHOWCART MODAL **/ 
+#showCart {
+  .modal-footer {
+    .btn-outline-danger:hover {
+      background-color: $bg-dark;
+      border-color: $bg-dark;
+      -webkit-animation: swing 1s ease;
+      animation: swing 1s ease;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+      &::before {
+        content: "\f07a";
+        font-family: FontAwesome;
+      }
+    }
+    .checkout-animate {
+      &:hover {
+        -webkit-animation: swing 1s ease;
+        animation: swing 1s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+      }
+    }
+  }
+  .pulse-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    padding-right: 2.2em;
+  }
+  
+  .pulse-grow:before {
+    content: "\f0a9";
+    position: absolute;
+    right: 1em;
+    padding: 0 1px;
+    font-family: FontAwesome;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  
+  .pulse-grow:hover:before,
+  .pulse-grow:focus:before,
+  .pulse-grow:active:before {
+    -webkit-animation-name: pulse-grow;
+    animation-name: pulse-grow;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+  }
+}
+
+
+/** ANIMATIONS **/
+/* Floating CREDIT: DJS Baker (https://fiddle.jshell.net/djsbaker/rkzZG/) */ 
+@keyframes Floatingx {
+  from {
+    -webkit-transform: translate(0, 0px);
+  }
+  65% {
+    -webkit-transform: translate(0, 15px);
+  }
+  to {
+    -webkit-transform: translate(0, -0px);
+  }
+}
+
+@keyframes Floating {
+  from {
+    -moz-transform: translate(0, 0px);
+  }
+  65% {
+    -moz-transform: translate(0, 15px);
+  }
+  to {
+    -moz-transform: translate(0, -0px);
+  }
+}
+
+
+/* Swing CREDIT: SARA Viera (https://twitter.com/NikkitaFTW) */
+@-webkit-keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+
+/* Icon Pulse Grow CREDIT: Ian Lunn (http://ianlunn.github.io/Hover) */
+@-webkit-keyframes pulse-grow {
+  to {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+}
+
+@keyframes pulse-grow {
+  to {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+}

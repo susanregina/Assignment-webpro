@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>MarketPlace | Shopping Cart</title>
+  <!-- META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="assets/img/cart-icon.png" type="image/x-icon">
+  <!-- CSS -->
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+  
+    <!-- NAVBAR -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark px-4 py-2 rem">
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/shopping-cart-xs.png" class="nav-img" alt="Logo"> MarketPlace
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active mr-2">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item mr-2">
+            <a class="nav-link" href="#">Categories</a>
+          </li>
+          <li class="nav-item mr-2">
+            <a class="nav-link" href="#">Showroom</a>
+          </li>
+          <li class="nav-item mr-2">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item mr-2">
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search for a Product..." aria-label="Search">
+              <button class="btn btn-outline-light btn-search my-2 my-sm-0" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- SHOWCASE HEADER -->
+    <header id="showcase">
+      <div id="my-carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#my-carousel" data-slide-to="1"></li>
+          <li data-target="#my-carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner rem">
+          <div class="carousel-item carousel-image-1 active">
+            <div class="container">
+              <div class="carousel-caption d-none d-sm-block text-center mb-5">
+                <h1 class="display-3 text-font">Super Rewards
+                  <i class="fa fa-dollar-sign"></i>
+                </h1>
+                <a href="#" class="btn btn-outline-danger">See More</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item carousel-image-2">
+            <div class="container">
+              <div class="carousel-caption d-none d-sm-block text-center mb-5">
+                <h1 class="display-3 text-font">Flash Deals
+                  <i class="fa fa-bolt"></i>
+                </h1>
+                <a href="#" class="btn btn-outline-danger">See More</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item carousel-image-3">
+            <div class="container">
+              <div class="carousel-caption d-none d-sm-block text-center mb-5">
+                <h1 class="display-3 text-font">Buyer Protection
+                  <i class="fa fa-unlock"></i>
+                </h1>
+                <a href="#" class="btn btn-outline-danger">See More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#my-carousel" class="carousel-control-prev primary-color" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#my-carousel" class="carousel-control-next primary-color" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </header>
+
+    <!-- PRODUCT & CART -->
+    <section id="product-cart" class="py-3 mt-5">
+      <div class="container bg-white py-3">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-2">
+            <div class="card">
+              <div class="card-body">
+                <div class="img-container">
+                  <img class="img-fluid" src="assets/img/d1.jpg" alt="Sunglass">
+                  <small class="badge badge-secondary place-badge">EYEPIECE</small>
+                </div>
+                <hr>
+                <div>
+                  <h5 class="text-font float-left card-title mr-3">RayB Sunglass</h5>
+                  <p class="float-right card-text text-danger number-font">
+                    <strong>$15</strong>
+                    <sup>.99</sup>
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-danger btn-block font-weight-bold" data-toggle="modal" data-target="#addToCart">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-2">
+            <div class="card">
+              <div class="card-body">
+                <div class="img-container text-right">
+                  <img src="assets/img/d2.jpg" alt="Watch">
+                  <small class="badge badge-secondary place-badge">WATCH</small>
+                </div>
+                <hr>
+                <div>
+                  <h5 class="float-left card-title mr-3 text-font">Seigoe Watch</h5>
+                  <p class="number-font float-right card-text text-danger">
+                    <strong>$25</strong>
+                    <sup>.99</sup>
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-danger btn-block font-weight-bold">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-2">
+            <div class="card">
+              <div class="card-body">
+                <div class="img-container text-right">
+                  <img src="assets/img/d3.jpg" alt="Shoe">
+                  <small class="badge badge-secondary place-badge">SHOE</small>
+                </div>
+                <hr>
+                <div>
+                  <h5 class="text-font float-left card-title mr-3">Gucci Heels</h5>
+                  <p class="number-font float-right card-text text-danger">
+                    <strong>$15</strong>
+                    <sup>.99</sup>
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-danger btn-block font-weight-bold">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-2">
+            <div class="card">
+              <div class="card-body">
+                <div class="img-container text-right">
+                  <img src="assets/img/d4.jpg" alt="Android Phone">
+                  <small class="badge badge-secondary place-badge">SMARTPHONE</small>
+                </div>
+                <hr>
+                <div>
+                  <h5 class="float-left card-title mr-3 text-font">Samsung S6 </h5>
+                  <p class="number-font float-right card-text text-danger number-font">
+                    <strong>$164</strong>
+                    <sup>.99</sup>
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-danger btn-block font-weight-bold">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOATING CART -->
+    <div id="floatingCart" class="floating fixed-botttom">
+      <a data-toggle="modal" data-target="#showCart">
+        <img src="assets/img/floating-cart.png" class="nav-img" alt="Logo" data-toggle="tooltip" data-placement="top" data-html="true"
+          title="<span class='text-center p-0 m-0'>show</span><br><span class='p-0 m-0 font-weight-bold text-pink text-center'>CART <i class='fa fa-arrow-alt-circle-down'></i></span>">
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="main-footer" class="text-center p-3 bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="text-pink font-weight-bold">Susan R Joseph &copy;
+            <span class="footer-font">MarketPlace</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- MODAL -->
+  <!-- Add To Cart -->
+  <div class="modal fade" id="addToCart">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title mx-auto">Add To Cart
+            <i class='fa fa-arrow-alt-circle-down'></i>
+          </h5>
+          <button class="close text-danger ml-0" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body text-font">
+          <div class="d-inline float-left">
+            <span class="item-name">Item Name</span>
+          </div>
+          <div class="d-inline float-right">
+            <input class="item-qty mr-2" type="number" placeholder="Qty" value="1" min="1">
+            <span class="item-price">$15.99</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <small class="font-weight-bold">Subtotal: $100.99</small>
+          <button class="btn btn-danger" data-dismiss="modal">Add
+            <i class="fa fa-cart-arrow-down"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Show Cart -->
+  <div class="modal fade" id="showCart">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title mx-auto">Items in Cart (3)</h5>
+          <button class="close ml-0" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+
+          <div class="order mb-2">
+            <div class="order-image">
+              <img src="assets/img/d1.jpg" alt="RayBan Sunglass">
+            </div>
+            <div class="order-details">
+              <div class="order-title">
+                <span class="text-font font-weight-bold mr-1">RayBan Sunglass</span>
+                <small class="text-muted order-number">#EYP-54621-987</small>
+              </div>
+              <small class="order-description">Ray-Ban is a brand of sunglasses and eyeglasses founded in 1937 by the American company Bausch & Lomb.</small>
+            </div>
+            <div class="order-price text-center text-font">$12.99</div>
+            <div class="order-qty">
+              <input type="number" value="2" min="1">
+            </div>
+            <div class="order-removal">
+              <a class="text-pink">
+                <i class="fas fa-times-circle"></i>
+              </a>
+            </div>
+            <div class="order-total-price text-font">$25.98</div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-danger"> Continue Shopping</button>
+          <button class="btn btn-danger checkout-animate pulse-grow">Checkout 
+            <!-- <i class="fa fa-arrow-circle-right"></i> -->
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script>
+    // Initialize tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+  </script>
+</body>
+
+</html>
